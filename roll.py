@@ -43,7 +43,7 @@ def rollDice (dice="1d6"):
                 pass
             continue
     
-    print("================================")
+    print("="+dice+"="*(31-len(dice)))
     print("Number of Dices: "+numberOfDices)
     
     print("Range: "+rangeOfNumbers)
