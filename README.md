@@ -20,6 +20,9 @@ Now you are thinking: *"why to use this and not any other dice roller on the web
 
 ## Instructions
 
+### Dependencies
+  1.  Colorama 
+
 ### How to install
   1.  Clone the repository
   2.  Make the file "roll.py" available by adding it to your path or creating an alias

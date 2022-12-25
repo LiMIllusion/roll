@@ -68,8 +68,8 @@ def rollDice (dice="1d6"):
 if __name__ == "__main__":
 
     if "-h" in sys.argv or "--help" in sys.argv:
-        pass
-    all_dices= sys.argv[1:]
+       print("roll [n]d[max][mod]")
+		 sys.exit(0)
     if not all_dices:
         rollDice()
         sys.exit(0)
