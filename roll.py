@@ -1,6 +1,7 @@
 import sys
 from random import randint
 import re
+from colorama import Fore, Back, Style
 
 def rollDice (dice="1d6"):
 
@@ -43,8 +44,9 @@ def rollDice (dice="1d6"):
                 pass
             continue
     
-    print("================================")
-    print("Number of Dices: "+numberOfDices)
+    print(Back.WHITE+Fore.BLACK+"="+Fore.RED+Style.BRIGHT+dice+Fore.BLACK+Style.NORMAL+"="*(31-len(dice))+Style.RESET_ALL)
+
+    print(Style.DIM + "Number of Dices: "+numberOfDices)
     
     print("Range: "+rangeOfNumbers)
 
@@ -56,10 +58,12 @@ def rollDice (dice="1d6"):
         rollsOfDices.append(randint(1, int(rangeOfNumbers)))
         print("Roll #" + str(roll+1) + ": "+str(rollsOfDices[-1]))
     totalValue = sum(rollsOfDices) + (int(bonusOrMalus) if bonusOrMalus else 0)
-    print("\nTotal: "+ "+".join(str(val) for val in rollsOfDices) + (bonusOrMalus if bonusOrMalus else "") + " = " + str(totalValue))
+    print(Style.RESET_ALL)
+
+    print(Fore.GREEN+Style.BRIGHT+"Total: "+ "+".join(str(val) for val in rollsOfDices) + (bonusOrMalus if bonusOrMalus else "") + " = " + str(totalValue))
     
-    
-    print("================================")
+    print(Style.RESET_ALL)
+    print(Back.WHITE+Fore.BLACK+"================================"+Style.RESET_ALL+"\n")
 
 if __name__ == "__main__":
 
